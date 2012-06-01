@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <title>Simplicity Signals | Kyle Fritz</title>
+
+<!--
+     _                 _ _      _ _             _                   _
+    (_)               | (_)    (_) |           (_)                 | |
+ ___ _ _ __ ___  _ __ | |_  ___ _| |_ _   _ ___ _  __ _ _ __   __ _| |___
+/ __| | '_ ` _ \| '_ \| | |/ __| | __| | | / __| |/ _` | '_ \ / _` | / __|
+\__ \ | | | | | | |_) | | | (__| | |_| |_| \__ \ | (_| | | | | (_| | \__ \
+|___/_|_| |_| |_| .__/|_|_|\___|_|\__|\__, |___/_|\__, |_| |_|\__,_|_|___/
+                | |                    __/ |       __/ |
+                |_|                   |___/       |___/
+
+
+Ssssh. For web lovers only:
+
+Hi there.
+
+I'm Kyle Fritz and this is my little placeholder on the web.
+
+I'm interested in:
+ * context-sensitive presentation of information
+ * structure and syntax in computing languages
+ * simplicity in aesthetics
+ * ubiquitous computing
+
+
+I am a creative person and pride myself in developing innovative solutions to challenges.
+I know how to develop flexible, scalable software and would like to put that knowledge to use to build products that people use and love every day.
+I am constantly learning new technologies and computing languages and like seeing the right tool used for the right problem.
+
+-->
+
+    <link href="screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+    <script src="jquery.cookie.js" type="text/javascript"></script>
+    <script type="text/javascript" charset="utf-8">
+	$(function(){
+
+		//$idconsolidation=$('#identity_consolidation li');
+		$idconsolidation=$('#identity_consolidation');
+		$idconsolidation.hide();
+		$('#subtitle').mouseover(function(){$idconsolidation.slideDown();});
+
+
+		//FOR BG PHOTO
+		var resizePhoto=function(){
+			var w = $( window );
+			var H = w.height();
+			var W = w.width();
+
+			$('#profile_photo').css({width: W, height: H});
+			if(W/H > 4.0/3.0){
+				var imgHeight=(3.0/4.0) *(W+.000001);
+				var imgWidth=W;
+			}else
+			{
+				var imgHeight=H;
+				var imgWidth=(4.0/3.0) *(H+.000001);
+			}
+			//console.log("resized"+H+"x"+W);
+			var heightOffset=H-imgHeight;
+			$('#profile_photo img').css({width: imgWidth, height: imgHeight, left:0, top: heightOffset}  );
+		};
+
+		var cookieId="profile_photo";
+		var bg_image_prefix="";//"/media/frontpage/";
+		var bg_images=["kpf_back.JPG","kpf_jump.JPG","kpf_head.JPG"];
+		var $bgimg=null;
+		var inccookie=function(){
+			var index=Number($.cookie(cookieId))+1;
+			//wrap
+			var index=index>=bg_images.length?0:index;
+			//console.log('looked up '+index);
+			$.cookie(cookieId, index, { expires: 180 });
+			return index;
+		}
+		var setimage=function(index){
+			var img=new Image();
+			img.alt=alt='Photo of Kyle Fritz';
+			$bgimg=$(img).load(function(){
+				$(this).hide();
+				if($bgimg!=null)
+					$bgimg.remove();
+
+				$('#profile_photo').append(this);
+				resizePhoto();
+				$(this).fadeIn();
+			})
+			.attr('src',bg_image_prefix+bg_images[index]);
+		}
+
+		$(window).resize(function(){resizePhoto()});
+
+		var index=0;
+		if(!$.cookie(cookieId))
+		{
+			//always use 0, back to viewer
+			//index=Math.floor(Math.random()*3);
+			$.cookie(cookieId, index, { expires: 180 });
+			//console.log('created for '+index);
+		}else{
+			index=inccookie();
+		}
+		setimage(index);
+		//setTimeout("changeimg()",6000);
+
+		changeimg=function(){
+			var index=inccookie();
+			setimage(index);
+			setTimeout("changeimg()",6000);
+		}
+
+	});
+	</script>
+</head>
+<body>
+	<div class="page_front">
+		<div id="profile_photo">
+		</div>
+		<div id="front_box">
+			<div id="header">
+				<h1 ><img id="logo" src="simplicitysignals_logo.png" alt="SimplicitySignals" title="Simplicity Signals | the personal website of Kyle Fritz"/></h1>
+				<div id="subtitle">
+					<h2 style="color:white">Kyle Fritz</h2>
+
+					<ul id="identity_consolidation">
+						<li id="google-profile"><a href="http://www.google.com/profiles/kyle.p.fritz" rel="me">Google</a></li>
+						<li id="facebook"><a href="http://www.facebook.com/kylepfritz/" rel="me">Facebook</a></li>
+						<li id="github"><a href="http://github.com/kylefritz" rel="me">GitHub</a></li>
+						<li id="twitter"><a href="http://twitter.com/kylefritz" rel="me">Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
