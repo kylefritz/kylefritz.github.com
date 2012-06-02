@@ -7,11 +7,12 @@ a:hover { text-decoration: underline; }
 	padding: 30px 30px 20px;
 	position: fixed;
 	top: 50px;
-	width: 550px;
+	width: 500px;
 	left: 25px;
 }
 #front_box h1{
 	color:white;
-	font-size:3em;
-	line-height:56px;
+}
+#front_box ul{
+	margin-top:0.5em;
 }
