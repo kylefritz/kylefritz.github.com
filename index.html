@@ -4,55 +4,56 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
-    <meta name="description" content="Kyle Fritz: Baltimore, MD Technologist." />
-    <meta name="author" content="LocalUp" />
+    <meta name="description" content="Kyle Fritz is a people-centric technologist living and working in Baltimore, Maryland." />
+    <meta name="author" content="Kyle Fritz" />
     <link rel="canonical" href="http://kylefritz.co" />
+    <title>Kyle Fritz | Baltimore, MD | People-Centric Technologist</title>
+
+	<!--
+	 _     _   _   _
+	| |   (_) | | | |
+	| |__  _  | |_| |__   ___ _ __ ___
+	| '_ \| | | __| '_ \ / _ \ '__/ _ \
+	| | | | | | |_| | | |  __/ | |  __/
+	|_| |_|_|  \__|_| |_|\___|_|  \___|
 
 
-    <title>Simplicity Signals | Kyle Fritz</title>
+	Ssssh. For web lovers only:
 
-<!--
-     _                 _ _      _ _             _                   _
-    (_)               | (_)    (_) |           (_)                 | |
- ___ _ _ __ ___  _ __ | |_  ___ _| |_ _   _ ___ _  __ _ _ __   __ _| |___
-/ __| | '_ ` _ \| '_ \| | |/ __| | __| | | / __| |/ _` | '_ \ / _` | / __|
-\__ \ | | | | | | |_) | | | (__| | |_| |_| \__ \ | (_| | | | | (_| | \__ \
-|___/_|_| |_| |_| .__/|_|_|\___|_|\__|\__, |___/_|\__, |_| |_|\__,_|_|___/
-                | |                    __/ |       __/ |
-                |_|                   |___/       |___/
+	Hi there.
+
+	I'm Kyle Fritz and this is my little placeholder on the web.
+
+	-->
+
+    <link rel="stylesheet" href="https://d1eiylix7lbou2.cloudfront.net/ffe/vendor/bootstrap-2.0.2/css/bootstrap.min.css">
+	<link href="screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="profile_photo"></div>
+	<div id="front_box">
+		<h1>
+			Kyle Fritz is a <br/>
+			people-centric technologist <br/>
+			living in Baltimore.
+		</h1>
+		<ul class="unstyled">
+			<li><a target="_blank" href="http://twitter.com/kylefritz" rel="me">@kylefritz</a></li>
+			<li><a target="_blank" href="http://github.com/kylefritz" rel="me">github://kylefritz</a></li>
+			<li><a target="_blank" href="http://www.facebook.com/kylepfritz/" rel="me">fb://kylefritz</a></li>
+		</ul>
+	</div>
 
 
-Ssssh. For web lovers only:
-
-Hi there.
-
-I'm Kyle Fritz and this is my little placeholder on the web.
-
-I'm interested in:
- * context-sensitive presentation of information
- * structure and syntax in computing languages
- * simplicity in aesthetics
- * ubiquitous computing
 
 
-I am a creative person and pride myself in developing innovative solutions to challenges.
-I know how to develop flexible, scalable software and would like to put that knowledge to use to build products that people use and love every day.
-I am constantly learning new technologies and computing languages and like seeing the right tool used for the right problem.
-
--->
-
-    <link href="screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="jquery.cookie.js" type="text/javascript"></script>
-    <script type="text/javascript" charset="utf-8">
+    <script src="https://d1eiylix7lbou2.cloudfront.net/ffe/vendor/bootstrap-2.0.2/js/bootstrap.min.js"></script>
+    <script src="https://d1eiylix7lbou2.cloudfront.net/ffe/vendor/jquery.slabtext-2.min.js"></script>
+    <script>
 	$(function(){
-
-		//$idconsolidation=$('#identity_consolidation li');
-		$idconsolidation=$('#identity_consolidation');
-		$idconsolidation.hide();
-		$('#subtitle').mouseover(function(){$idconsolidation.slideDown();});
-
-
+		$('h1').slabText()
 		//FOR BG PHOTO
 		var resizePhoto=function(){
 			var w = $( window );
@@ -123,26 +124,5 @@ I am constantly learning new technologies and computing languages and like seein
 
 	});
 	</script>
-</head>
-<body>
-	<div class="page_front">
-		<div id="profile_photo">
-		</div>
-		<div id="front_box">
-			<div id="header">
-				<h1 ><img id="logo" src="simplicitysignals_logo.png" alt="SimplicitySignals" title="Simplicity Signals | the personal website of Kyle Fritz"/></h1>
-				<div id="subtitle">
-					<h2 style="color:white">Kyle Fritz</h2>
-
-					<ul id="identity_consolidation">
-						<li id="google-profile"><a href="http://www.google.com/profiles/kyle.p.fritz" rel="me">Google</a></li>
-						<li id="facebook"><a href="http://www.facebook.com/kylepfritz/" rel="me">Facebook</a></li>
-						<li id="github"><a href="http://github.com/kylefritz" rel="me">GitHub</a></li>
-						<li id="twitter"><a href="http://twitter.com/kylefritz" rel="me">Twitter</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
 </body>
 </html>
