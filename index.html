@@ -1,6 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
@@ -23,7 +22,7 @@
 	-->
 
     <link rel="stylesheet" href="https://d1eiylix7lbou2.cloudfront.net/ffe/vendor/bootstrap-2.0.2/css/bootstrap.min.css">
-	<link href="screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div id="profile_photo"></div>
@@ -44,9 +43,15 @@
 
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="jquery.cookie.js" type="text/javascript"></script>
+    <script src="jquery.cookie.js"></script>
     <script src="https://d1eiylix7lbou2.cloudfront.net/ffe/vendor/bootstrap-2.0.2/js/bootstrap.min.js"></script>
+    <script async src="http://www.google-analytics.com/ga.js"></script>
     <script>
+    	//analytics
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-32376318-1']);
+	_gaq.push(['_trackPageview']);
+	  
 	$(function(){
 		//FOR BG PHOTO
 		var resizePhoto=function(){
