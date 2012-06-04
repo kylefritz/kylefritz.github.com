@@ -24,26 +24,32 @@
     <link rel="stylesheet" href="https://d1eiylix7lbou2.cloudfront.net/ffe/vendor/bootstrap-2.0.2/css/bootstrap.min.css">
     <link href="screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<script type="text/javascript">
-	
+
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-32376318-1']);
 	  _gaq.push(['_trackPageview']);
-	
+
 	  (function() {
 	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
-	
+
 	</script>
 </head>
 <body>
 	<div id="profile_photo"></div>
 	<div id="front_box">
-		<h1>
-			Kyle Fritz is a people-centric
-			technologist living in Baltimore.
+		<h1 itemscope itemtype="http://data-vocabulary.org/Person">
+			<span itemprop="name">Kyle Fritz</span>
+			is a <span itemprop="title">people-centric technologist</span>
+			living in
+			<span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
+				<span itemprop="locality">Baltimore</span>
+				<span itemprop="region" class="hide">MD</span>
+			</span>
 		</h1>
+
 		<ul class="unstyled">
 			<li><a target="_blank" href="http://twitter.com/kylefritz" rel="me">@kylefritz</a></li>
 			<li><a target="_blank" href="http://github.com/kylefritz" rel="me">github</a></li>
