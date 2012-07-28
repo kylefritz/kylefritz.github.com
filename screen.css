@@ -13,6 +13,14 @@ a:hover { text-decoration: underline; }
 #front_box h1{
 	color:white;
 }
+#front_box h2{
+            color:white;
+}
 #front_box ul{
 	margin-top:0.5em;
+}
+#front_box li{
+    display: inline;
+    margin-right: 10px;
+    font-size: 25px;
 }
